@@ -10,7 +10,7 @@ const HomePage = () => {
       <div className="hero">
         <div className="subtitle">Welcome to</div>
         
-        <h1 className="title">AngularWordQuest</h1>
+        <h1 className="title">WordQuest</h1>
         
         <div className="description">
           A fun and challenging word guessing game with multiple modes and categories!
