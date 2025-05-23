@@ -165,6 +165,54 @@ const gameReducer = (state, action) => {
 // Provider component
 export const GameProvider = ({ children }) => {
   const [state, dispatch] = useReducer(gameReducer, initialGameState);
+  const [isLoadingWordBank, setIsLoadingWordBank] = useState(false);
+
+  // Load game state from localStorage when component mounts
+  useEffect(() => {
+    const savedState = localStorage.getItem('angularWordQuestState');
+    if (savedState) {
+      try {
+        const parsedState = JSON.parse(savedState);
+        dispatch({
+          type: ACTIONS.UPDATE_USER,
+          payload: parsedState.user || initialGameState.user
+        });
+        
+        if (parsedState.stats) {
+          dispatch({
+            type: ACTIONS.UPDATE_STATS,
+            payload: parsedState.stats
+          });
+        }
+      } catch (error) {
+        console.error('Error parsing saved state:', error);
+      }
+    }
+  }, []);
+
+  // Sync with Supabase when component mounts
+  useEffect(() => {
+    const syncWithSupabase = async () => {
+      try {
+        setIsLoadingWordBank(true);
+        const wordBank = await syncWordBankWithSupabase();
+        
+        // Check if we received data from Supabase
+        if (Object.keys(wordBank).length > 0) {
+          dispatch({
+            type: ACTIONS.SYNC_WORD_BANK,
+            payload: { wordBank }
+          });
+        }
+      } catch (error) {
+        console.error('Error syncing with Supabase:', error);
+      } finally {
+        setIsLoadingWordBank(false);
+      }
+    };
+    
+    syncWithSupabase();
+  }, []);
 
   // Save game state to localStorage when it changes
   useEffect(() => {
