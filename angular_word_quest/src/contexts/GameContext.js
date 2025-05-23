@@ -186,7 +186,7 @@ export const GameProvider = ({ children }) => {
 
   // Load game state from localStorage when component mounts
   useEffect(() => {
-    const savedState = localStorage.getItem('angularWordQuestState');
+    const savedState = localStorage.getItem('wordQuestState');
     if (savedState) {
       try {
         const parsedState = JSON.parse(savedState);
