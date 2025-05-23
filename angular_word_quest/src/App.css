@@ -4,6 +4,8 @@
   --text-color: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.7);
   --border-color: rgba(255, 255, 255, 0.1);
+  --error-color: #dc3545;
+  --success-color: #28a745;
 }
 
 body {
