@@ -100,7 +100,7 @@ const PlayPage = () => {
         ) : (
           <div className="game-in-progress">
             <div className="game-header">
-              <h1>{selectedMode === 'category' ? `Category: ${state.currentCategory}` : 'Word Quest'}</h1>
+              <h1>{selectedMode === 'category' ? `Category: ${state.currentCategory}` : 'WordQuest'}</h1>
               {state.gameStatus !== 'playing' && (
                 <div className="game-result">
                   <h2>{state.gameStatus === 'won' ? 'You Won!' : 'Game Over'}</h2>
