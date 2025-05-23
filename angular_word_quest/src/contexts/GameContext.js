@@ -1,5 +1,6 @@
-import React, { createContext, useContext, useReducer, useEffect } from 'react';
+import React, { createContext, useContext, useReducer, useEffect, useState } from 'react';
 import { initialGameState } from '../data/initialData';
+import { syncWordBankWithSupabase } from '../utils/supabaseClient';
 
 // Create the context
 const GameContext = createContext();
