@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="app-footer">
       <div className="container">
-        <p>&copy; {new Date().getFullYear()} AngularWordQuest - A Hangman-style Word Game</p>
+        <p>&copy; {new Date().getFullYear()} WordQuest - A Hangman-style Word Game</p>
         <div className="footer-links">
           <a href="#rules">Game Rules</a>
           <a href="#privacy">Privacy Policy</a>

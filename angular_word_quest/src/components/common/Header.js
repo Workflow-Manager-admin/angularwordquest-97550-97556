@@ -15,7 +15,7 @@ const Header = () => {
       <div className="container">
         <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center' }}>
           <Link to="/" className="logo">
-            <span className="logo-symbol">A</span> AngularWordQuest
+            <span className="logo-symbol">W</span> WordQuest
           </Link>
           
           <Navigation />
