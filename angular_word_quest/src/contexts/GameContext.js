@@ -158,6 +158,21 @@ const gameReducer = (state, action) => {
           ...action.payload,
         },
       };
+    
+    case ACTIONS.SYNC_WORD_BANK:
+      return {
+        ...state,
+        wordBank: action.payload.wordBank,
+      };
+    
+    case ACTIONS.UPDATE_STATS:
+      return {
+        ...state,
+        stats: {
+          ...state.stats,
+          ...action.payload,
+        },
+      };
       
     default:
       return state;
