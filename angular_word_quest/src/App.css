@@ -108,3 +108,425 @@ body {
   padding: 12px 24px;
   font-size: 1.1rem;
 }
+
+/* Game page styles */
+.game-setup {
+  max-width: 800px;
+  margin: 100px auto 0;
+  text-align: center;
+}
+
+.game-options {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.mode-selector h2,
+.category-selector h2 {
+  margin-bottom: 20px;
+}
+
+.mode-buttons,
+.category-buttons,
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.start-game-button {
+  margin-top: 20px;
+}
+
+.game-in-progress {
+  margin-top: 100px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.game-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .game-content {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.game-area,
+.game-sidebar {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.game-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.game-result {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: var(--kavia-orange);
+  border-radius: 8px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+
+.game-answer {
+  margin-top: 10px;
+}
+
+.game-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Profile page styles */
+.profile-page {
+  margin-top: 100px;
+  padding-bottom: 50px;
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .profile-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.profile-section {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.profile-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
+.profile-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  border-radius: 4px;
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.preference-group {
+  margin-bottom: 20px;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.achievement-icon {
+  font-size: 24px;
+}
+
+.achievement-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.achievement-description {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.empty-achievements {
+  padding: 20px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+/* Hangman game specific styles */
+.word-display {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.word-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.word-letter {
+  font-size: 2rem;
+  font-weight: bold;
+  width: 40px;
+  display: inline-flex;
+  justify-content: center;
+  border-bottom: 2px solid var(--text-color);
+  padding-bottom: 5px;
+}
+
+.word-letter.space {
+  border-bottom: none;
+}
+
+.word-category {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.word-category span {
+  color: var(--kavia-orange);
+  font-weight: bold;
+}
+
+.keyboard-container {
+  margin: 30px 0;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+
+.keyboard-key {
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0;
+}
+
+.hangman-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.hangman-part {
+  stroke: var(--kavia-orange);
+  stroke-width: 3;
+  fill: none;
+}
+
+.guesses-info {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.scoreboard {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.scoreboard h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.stat-item {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--kavia-orange);
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.best-time {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Extra styling for navbar links */
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--kavia-orange);
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.user-level {
+  font-size: 0.9rem;
+  color: var(--kavia-orange);
+}
+
+/* Footer styling */
+.app-footer {
+  margin-top: auto;
+  padding: 30px 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.footer-links {
+  margin-top: 15px;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.footer-links a:hover {
+  color: var(--kavia-orange);
+}
+
+/* Home page features */
+.features-section {
+  padding: 60px 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.feature-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  color: var(--kavia-orange);
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+}
+
+/* Button variants */
+.btn-primary {
+  background-color: var(--kavia-orange);
+}
+
+.btn-secondary {
+  background-color: #555;
+}
+
+.btn-success {
+  background-color: var(--success-color);
+}
+
+.btn-danger {
+  background-color: var(--error-color);
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 0.85rem;
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 20px;
+}
