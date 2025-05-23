@@ -233,7 +233,7 @@ export const GameProvider = ({ children }) => {
 
   // Save game state to localStorage when it changes
   useEffect(() => {
-    localStorage.setItem('angularWordQuestState', JSON.stringify({
+    localStorage.setItem('wordQuestState', JSON.stringify({
       stats: state.stats,
       user: state.user,
       wordBank: state.wordBank,
