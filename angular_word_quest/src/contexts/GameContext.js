@@ -16,6 +16,8 @@ export const ACTIONS = {
   REMOVE_WORD: 'remove_word',
   UPDATE_CATEGORY: 'update_category',
   UPDATE_USER: 'update_user',
+  SYNC_WORD_BANK: 'sync_word_bank',
+  UPDATE_STATS: 'update_stats',
 };
 
 // Game reducer function to handle state updates
